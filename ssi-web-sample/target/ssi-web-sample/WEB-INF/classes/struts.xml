@@ -8,7 +8,7 @@
     <!--<constant name="struts.devMode" value="true" />-->
     <package name="comment" extends="struts-default" namespace="/comment"  >
         <action name="commentAction" class="com.raphael.action.CommentAction">
-            <result name="success">/success.jsp</result>
+            <result name="success">/index.vm</result>
             <result name="failure">/failure.jsp</result>
         </action>
     </package>

@@ -3,6 +3,9 @@ package com.raphael.action;
 import com.raphael.bean.Comment;
 import com.opensymphony.xwork2.ActionSupport;
 import com.raphael.service.CommentService;
+import org.apache.velocity.VelocityContext;
+
+import java.util.List;
 
 /**
  * 应用
@@ -23,9 +26,11 @@ public class CommentAction extends ActionSupport {
 //        Comment c = getComment();
 //        commentService.addComment(c);
 //        commentService.subComment(comment);
-
-
-
+        List<Comment> commentList = commentService.selectAllComment();
+        VelocityContext context = new VelocityContext();
+        context.put("commentList",commentList);
+        String aaa = "fedasd";
+//        commentList.add(comment);
 //        if("a".equals(comment.getTitle().toString()))
             return "success";
 //        else

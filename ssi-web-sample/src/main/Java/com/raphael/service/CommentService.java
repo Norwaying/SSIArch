@@ -3,6 +3,8 @@ package com.raphael.service;
 import com.raphael.bean.Comment;
 import com.raphael.dao.CommentDAO;
 
+import java.util.List;
+
 /**
  * 逻辑
  * Created by Administrator on 2015/2/14.
@@ -18,6 +20,10 @@ public class CommentService {
 
     public void subComment(Comment comment){
         ;
+    }
+
+    public List<Comment> selectAllComment(){
+        return commentDAO.queryAllComment();
     }
 
     public void setCommentDAO(CommentDAO commentDAO) {

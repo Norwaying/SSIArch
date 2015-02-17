@@ -5,4 +5,8 @@
     <insert id="insertComment" parameterType="comment">
         insert into tb_comment(title,content) values(#{title},#{content})
     </insert>
+
+    <select id="queryAllComment" resultType="comment">
+        select * from tb_comment
+    </select>
 </mapper>

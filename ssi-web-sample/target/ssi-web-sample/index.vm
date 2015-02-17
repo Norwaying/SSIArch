@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>评论汇总页aa</title>
+</head>
+<body>
+${aaa}
+    #foreach(${comment} in ${commentList})
+        ${comment}</br>
+    #end
+</body>
+</html>
